@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  web:
+    build: ./docker/web
+    volumes:
+      - ./src:/app/src
+      - ../ai-framework-core/src:/app/core:ro
+    develop:
+      watch:
+        - action: sync
+          path: ./src
+          target: /app/src
+        - action: sync  
+          path: ../ai-framework-core/src
+          target: /app/core

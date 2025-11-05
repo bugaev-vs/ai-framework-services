@@ -1,0 +1,8 @@
+{
+  "python.defaultInterpreterPath": "./venv", 
+  "python.analysis.extraPaths": [
+    "./src",
+    "../ai-framework-core/src"
+  ],
+  "docker.composeFile": "docker-compose.dev.yml"
+}
